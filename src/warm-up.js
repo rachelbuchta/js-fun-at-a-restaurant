@@ -85,7 +85,7 @@ vegetables[2];
 // Create a new variable "fruits" and assign it to an Array of 7
 // different fruits.
 
-var fruits = ["apples", "bananas", "oranges", "kiwi", "pineapple"];
+var fruits = ["apples", "bananas", "oranges", "kiwi", "pineapple", "grapes", "blackberries"];
 
 // Write the code to access the 5th element of the array, using bracket notation.
 
