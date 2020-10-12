@@ -1,42 +1,42 @@
 function nameMenuItem(menuItemName) {
-    return `Delicious ${menuItemName}`
+  return `Delicious ${menuItemName}`
 };
 
 function createMenuItem(menuItemName, price, type) {
-    var menuItemName = {
-      name : menuItemName,
-      price : price,
-      type : type
-    }
+  var menuItemName = {
+    name: menuItemName,
+    price: price,
+    type: type
+  };
 
-    return menuItemName;
+  return menuItemName;
 };
 
 function addIngredients(ingredientName, ingredients) {
-      if (ingredients.includes(ingredientName) !== true) {
-      ingredients.push(ingredientName);
-      } else {
-      return ingredients;
-    }
+  if (ingredients.includes(ingredientName) !== true) {
+    ingredients.push(ingredientName);
+  } else {
+    return ingredients;
   };
+};
 
 function formatPrice(initialPrice) {
-    return "$" + initialPrice;
+  return "$" + initialPrice;
 };
 
 function decreasePrice(initialPrice) {
-      var decreasedPrice = (initialPrice/10);
-      return (initialPrice - decreasedPrice);
-    };
+  var decreasedPrice = (initialPrice / 10);
+  return (initialPrice - decreasedPrice);
+};
 
 function createRecipe(title, ingredients, menuItemType) {
-    var recipe = {
-      title : title,
-      ingredients : ingredients,
-      type : menuItemType
-    }
+  var recipe = {
+    title: title,
+    ingredients: ingredients,
+    type: menuItemType
+  };
 
-    return recipe;
+  return recipe;
 };
 
 
@@ -47,8 +47,7 @@ function createRecipe(title, ingredients, menuItemType) {
 
 
 
-
-  module.exports = {
+module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
