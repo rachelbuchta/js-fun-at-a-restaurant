@@ -9,16 +9,16 @@ var {
 
 describe("restaurant.js", function() {
   describe("createRestaurant", function() {
-    it("should be a function", function () {
+    it("should be a function", function() {
       assert.isFunction(createRestaurant);
     });
 
-    it("should have a name", function () {
+    it("should have a name", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       assert.equal(pizzaRestaurant.name, "Sexy Pizza");
     });
 
-    it("should be able to have a different name", function () {
+    it("should be able to have a different name", function() {
       var arepaRestaurant = createRestaurant("Quiero Arepas");
 
       assert.equal(arepaRestaurant.name, "Quiero Arepas");
@@ -57,7 +57,7 @@ describe("restaurant.js", function() {
       assert.equal(pizzaRestaurant.menus.lunch[0], bbqPizza);
     });
 
-    it("should add an item to the lunch menu if the menu already has items", function () {
+    it("should add an item to the lunch menu if the menu already has items", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       var bbqPizza = {
         name: "BBQ Chicken",
@@ -129,13 +129,15 @@ describe("restaurant.js", function() {
       addMenuItem(pizzaRestaurant, baconEggsPizza);
 
       assert.deepEqual(pizzaRestaurant.menus, {
-        breakfast: [baconEggsPizza], lunch: [bbqPizza], dinner: []
+        breakfast: [baconEggsPizza],
+        lunch: [bbqPizza],
+        dinner: []
       });
     });
   });
 
   describe("removeMenuItem", function() {
-    it("should be a function", function () {
+    it("should be a function", function() {
       assert.isFunction(removeMenuItem);
     });
 
@@ -166,12 +168,14 @@ describe("restaurant.js", function() {
       var result = removeMenuItem(pizzaRestaurant, "Bacon and Eggs Pizza", "breakfast");
 
       assert.deepEqual(pizzaRestaurant.menus, {
-        breakfast: [], lunch: [bbqPizza], dinner: [veggiePizza]
+        breakfast: [],
+        lunch: [bbqPizza],
+        dinner: [veggiePizza]
       });
       assert.equal(result, "No one is eating our Bacon and Eggs Pizza - it has been removed from the breakfast menu!");
     });
 
-    it("should remove a different item from the menu to update it", function () {
+    it("should remove a different item from the menu to update it", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       var bbqPizza = {
         name: "BBQ Chicken Pizza",
@@ -198,7 +202,9 @@ describe("restaurant.js", function() {
       var result = removeMenuItem(pizzaRestaurant, "Veggie Pizza", "dinner");
 
       assert.deepEqual(pizzaRestaurant.menus, {
-        breakfast: [baconEggsPizza], lunch: [bbqPizza], dinner: []
+        breakfast: [baconEggsPizza],
+        lunch: [bbqPizza],
+        dinner: []
       });
       assert.equal(result, "No one is eating our Veggie Pizza - it has been removed from the dinner menu!");
     });
